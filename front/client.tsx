@@ -12,7 +12,7 @@ import App from './src/layouts/App';
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL =
-  process.env.NODE_ENV === 'production' ? 'https://sleact.nodebird.com' : 'http://localhost:3090';
+  process.env.NODE_ENV === 'production' ? 'https://admirable-donut-f22cc6.netlify.app/' : 'http://localhost:3090';
 
 const container = document.getElementById('app') as HTMLDivElement;
 const root = ReactDOM.createRoot(container);
