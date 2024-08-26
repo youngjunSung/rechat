@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>슬리액</title>
+    <link rel="shortcut icon" href="https://a.slack-edge.com/cebaa/img/ico/favicon.ico" />
+  </head>
+  <body>
+    <div id="app" class="min-h-[calc(var(--vh,1vh)*100)]"></div>
+    <script src="/dist/app.js"></script>
+    <script>
+      const getVh = () => {
+        document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01).toFixed(2)}px`);
+      }
+      const getVvh = () => {
+        document.documentElement.style.setProperty('--vh', `${(visualViewport.height * 0.01).toFixed(2)}px`);
+      }
+      visualViewport.addEventListener('resize', getVvh);
+      window.addEventListener('load', () => {
+        getVh();
+      });
+    </script>
+  </body>
+</html>

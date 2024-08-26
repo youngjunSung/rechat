@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'pretendard';
+    font-weight: 300;
+    src: url("../assets/fonts/Pretendard-Light.woff");
+  }
+    
+  @font-face {
+    font-family: 'pretendard';
+    font-weight: 400;
+    src: url("../assets/fonts/Pretendard-Regular.woff");
+  }
+    
+  @font-face {
+    font-family: 'pretendard';
+    font-weight: 500;
+    src: url("../assets/fonts/Pretendard-Medium.woff");
+  }
+    
+  @font-face {
+    font-family: 'pretendard';
+    font-weight: 600;
+    src: url("../assets/fonts/Pretendard-SemiBold.woff");
+  }
+    
+  @font-face {
+    font-family: 'pretendard';
+    font-weight: 700;
+    src: url("../assets/fonts/Pretendard-Bold.woff");
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    opacity: 1;
+    background-color: rgba(189, 189, 189, 0.65);
+  }
+  body {
+    font-family: 'pretendard', sans-serif;
+    font-size: 14px;
+  }
+  summary {
+    outline: 0 none;
+    &::-webkit-details-marker,
+    &::marker {
+      content: '';
+      display: none;
+    }
+    &:focus {
+      outline: 0 none;
+    }
+  }
+  [hidden] {
+    display: none !important;
+  }
+}
+
+@layer utilities {
+  .blind {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  .center {
+    @apply flex justify-center items-center;
+  }
+}
