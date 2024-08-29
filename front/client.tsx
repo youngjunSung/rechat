@@ -11,8 +11,7 @@ import { customTheme } from './src/styles/customTheme';
 import App from './src/layouts/App';
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL =
-  process.env.NODE_ENV === 'production' ? 'http://http://43.201.1.136/' : 'http://localhost:3090';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? 'http://43.201.1.136/' : 'http://localhost:3090';
 
 const container = document.getElementById('app') as HTMLDivElement;
 const root = ReactDOM.createRoot(container);
